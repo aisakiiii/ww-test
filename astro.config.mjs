@@ -1,17 +1,13 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import tailwind from "@tailwindcss/vite";
-import node from "@astrojs/node";
 import sitemap from "@astrojs/sitemap";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
-  site: "http://127.0.0.1:4321",
+  site: "https://spectacular-biscochitos-b8707d.netlify.app", // Mengarah langsung ke domain Netlify Anda
   integrations: [react(), sitemap()],
-  output: "server",
-  adapter: node({
-    mode: "standalone",
-  }),
+  output: "static", // DIUBAH MENJADI STATIC AGAR BISA DIBACA NETLIFY GRATISAN
   vite: {
     plugins: [
       tailwind(),
@@ -21,22 +17,22 @@ export default defineConfig({
           enabled: true,
         },
         workbox: {
-          navigateFallback: "/404",
+          navigateFallback: undefined, // Dimatikan agar tidak membentur halaman 404 statis
           globPatterns: ["**/*.{css,js,html,svg,png,ico,txt}"],
           runtimeCaching: [
             {
               // Cache gambar dari Unsplash, Placehold.co, Google Fonts, dll
               urlPattern:
                 /^https:\/\/(images\.unsplash\.com|placehold\.co|fonts\.googleapis\.com|fonts\.gstatic\.com)\/.*/i,
-              handler: "CacheFirst", // Strategi: Cek Cache dulu, baru download
+              handler: "CacheFirst",
               options: {
                 cacheName: "external-images-fonts",
                 expiration: {
-                  maxEntries: 50, // Maksimal simpan 50 file
-                  maxAgeSeconds: 60 * 60 * 24 * 30, // Simpan selama 30 Hari
+                  maxEntries: 50,
+                  maxAgeSeconds: 60 * 60 * 24 * 30, // 30 Hari
                 },
                 cacheableResponse: {
-                  statuses: [0, 200], // Cache jika sukses
+                  statuses: [0, 200],
                 },
               },
             },
@@ -55,9 +51,9 @@ export default defineConfig({
           ],
         },
         manifest: {
-          name: "The Wedding of Fera & Yahya",
-          short_name: "Fera & Yahya",
-          description: "Undangan Pernikahan Digital Fera & Yahya",
+          name: "The Wedding of Denny & Ingrid",
+          short_name: "Denny & Ingrid",
+          description: "Wedding Invitation of Denny & Ingrid",
           theme_color: "#020617",
           background_color: "#020617",
           display: "standalone",
