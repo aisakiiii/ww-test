@@ -21,9 +21,8 @@ export const MUSIC_URL =
 export const WEDDING_TEXT = {
   // 1. Salam Pembuka (Universal, Manis, & Sederhana)
   opening: {
-    salam: "Salam Hangat dan Salam Sejahtera",
-    intro:
-      "Dua cerita yang berbeda kini menyatu menjadi satu perjalanan untuk saling melengkapi dan bertumbuh bersama. Di hari yang penuh kebahagiaan ini, kami ingin mengajak Anda menjadi bagian dari awal lembaran baru kami.",
+    salam: "Warmest Greetings,\n\nTwo different stories now intertwine into a single journey to complement one another and grow together. On this day filled with happiness, we would love to invite you to be a part of the beginning of our new chapter.",
+    intro: "",
   },
 
   // 2. Quotes Pembuka (Elegan & Khidmat)
