@@ -13,40 +13,40 @@ export const MAX_GUESTS = parseInt(
   10
 );
 
-// Menggunakan lagu: A Thousand Years - The Piano Guys (Piano Cover)
+// Music track: A Thousand Years - The Piano Guys (Piano Cover)
 export const MUSIC_URL =
   import.meta.env.PUBLIC_MUSIC_URL ??
   "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
 
 export const WEDDING_TEXT = {
-  // 1. Salam Pembuka (Universal, Manis, & Sederhana)
+  // 1. Opening Greeting (Dikosongkan karena tidak didukung oleh layout template)
   opening: {
-    salam: "Warmest Greetings,\n\nTwo different stories now intertwine into a single journey to complement one another and grow together. On this day filled with happiness, we would love to invite you to be a part of the beginning of our new chapter.",
+    salam: "",
     intro: "",
   },
 
-  // 2. Quotes Pembuka (Elegan & Khidmat)
+  // 2. Opening Quotes (Tetap anggun sebagai ayat pembuka)
   quote: {
-    ar_rum: `"Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan."`,
-    source: "Kolose 3:14",
+    ar_rum: `"And over all these virtues put on love, which binds them all together in perfect unity."`,
+    source: "Colossians 3:14",
   },
 
-  // 3. Kalimat Undangan
+  // 3. Invitation Message (Kalimat pengantar cerita digabung di sini agar pasti muncul)
   invitation:
-    "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, kawan, dan sahabat, untuk memberikan doa restu pada acara pernikahan kami:",
+    "Two different stories now intertwine into a single journey to complement one another and grow together. On this day filled with happiness, we would love to invite you to be a part of the beginning of our new chapter.\n\nWith all due respect, we cordially invite our family, friends, and colleagues to join us and celebrate our wedding day:",
 
-  // 4. Penutup (Footer)
+  // 4. Closing (Footer)
   closing: {
-    text: "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.",
-    salam: "Terima Kasih & Tuhan Memberkati",
-    signature: "Kami yang berbahagia,",
-    family: "Keluarga Besar Denny & Ingrid",
+    text: "It would be our greatest honor and joy to have your presence to celebrate and bless our marriage.",
+    salam: "Thank You & God Bless",
+    signature: "With love,",
+    family: "The Families of Denny & Ingrid",
   },
 
-  // 5. Informasi Dresscode Tambahan (Sesuai Pilihan Anda)
+  // 5. Dress Code Info (Bebas dari kata "Blessing/Restu")
   gift: {
-    title: "Dress Code & Tanda Kasih",
-    desc: "Demi keselarasan estetika acara, para tamu undangan dihimbau untuk mengenakan pakaian bernuansa All Black (Hitam). Kehadiran serta dukungan doa Anda sangat melengkapi kebahagiaan kami.",
+    title: "Dress Code & Attire",
+    desc: "To complement the aesthetic of our celebration, guests are kindly requested to dress in All Black attire. Your presence and kind prayers are the greatest gifts to complete our happiness.",
   },
 };
 
@@ -55,38 +55,38 @@ export const WEDDING_CONFIG: WeddingConfig = {
     groom: {
       name: "Denny",
       fullName: "Denny Kiiii",
-      parents: "Putra pertama dari Bapak Kiiii & Ibu Juuuuu",
+      parents: "First son of Mr. Kiiii & Mrs. Juuuuu",
       image: "https://placehold.co/600x800?text=Denny+Portrait",
     },
     bride: {
       name: "Ingrid",
       fullName: "Ingrid Melyana",
-      parents: "Putri pertama dari Bapak Gohhh & Ibu Helll",
+      parents: "First daughter of Mr. Gohhh & Mrs. Helll",
       image: "https://placehold.co/600x800?text=Ingrid+Portrait",
     },
   },
   venue: {
     name: "Grha Mahameru",
-    address: "Jalan Raya Jemursari 73, Wonocolo, Surabaya, Jawa Timur 60237",
+    address: "Jalan Raya Jemursari 73, Wonocolo, Surabaya, East Java 60237",
     latitude: -7.3195, 
     longitude: 112.7483,
   },
   events: {
     akad: {
-      title: "Pemberkatan Nikah",
-      day: "Sabtu",
-      date: "23 Januari 2027",
+      title: "Holy Matrimony",
+      day: "Saturday",
+      date: "January 23, 2027",
       startTime: "13:00",
-      endTime: "Selesai",
+      endTime: "Until Finished",
       startDateTime: new Date("2027-01-23T13:00:00+07:00"),
       endDateTime: new Date("2027-01-23T15:00:00+07:00"),
     },
     resepsi: {
-      title: "Resepsi Pernikahan",
-      day: "Sabtu",
-      date: "23 Januari 2027",
+      title: "Wedding Reception",
+      day: "Saturday",
+      date: "January 23, 2027",
       startTime: "18:00",
-      endTime: "Selesai",
+      endTime: "Until Finished",
       startDateTime: new Date("2027-01-23T18:00:00+07:00"),
       endDateTime: new Date("2027-01-23T21:00:00+07:00"),
     },
@@ -97,7 +97,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
   },
 };
 
-// Bagian Love Story dikosongkan agar fiturnya tidak muncul di halaman web
+// Bagian Love Story dikosongkan agar fiturnya tersembunyi
 export const LOVE_STORY = [];
 
 export const BANK_ACCOUNTS = parseJson(import.meta.env.PUBLIC_BANK_ACCOUNTS, [
