@@ -59,15 +59,17 @@ const Hero: React.FC = () => {
             <div className="h-[1px] w-6 bg-white/30 md:w-20"></div>
           </div>
 
+          {/* URUTAN NAMA DIUBAH: GROOM (DENNY) DULUAN, BARU BRIDE (INGRID) */}
           <h1 className="font-serif text-5xl leading-tight tracking-tight break-words text-white italic sm:text-7xl md:text-[9rem] md:leading-none">
             {WEDDING_CONFIG.couple.groom.name}
             <span className="text-accent/30 mx-2 md:mx-6">&</span>
             {WEDDING_CONFIG.couple.bride.name}
           </h1>
 
+          {/* TEKS DIUBAH KE BAHASA INGGRIS ANGGUN */}
           {guestName && (
             <p className="animate-reveal mt-4 font-serif text-xl text-white/80 italic">
-              Kepada Yth. {guestName}
+              Dear {guestName},
             </p>
           )}
 
@@ -101,6 +103,7 @@ const Hero: React.FC = () => {
           ))}
         </div>
 
+        {/* TEKS TOMBOL DIUBAH JADI BAHASA INGGRIS */}
         <button
           onClick={handleScrollToContent}
           className="group mt-12 flex flex-col items-center gap-3 text-white/40 transition-all duration-500 hover:text-white md:mt-20 md:gap-4"
@@ -109,7 +112,7 @@ const Hero: React.FC = () => {
             <ChevronDown className="h-4 w-4 animate-bounce md:h-5 md:w-5" />
           </div>
           <span className="tracking-luxury text-[8px] font-bold uppercase opacity-50 group-hover:opacity-100 md:text-[9px]">
-            Lihat Detail
+            View Details
           </span>
         </button>
       </div>
