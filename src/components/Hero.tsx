@@ -60,9 +60,9 @@ const Hero: React.FC = () => {
           </div>
 
           <h1 className="font-serif text-5xl leading-tight tracking-tight break-words text-white italic sm:text-7xl md:text-[9rem] md:leading-none">
-            {WEDDING_CONFIG.couple.bride.name}
-            <span className="text-accent/30 mx-2 md:mx-6">&</span>
             {WEDDING_CONFIG.couple.groom.name}
+            <span className="text-accent/30 mx-2 md:mx-6">&</span>
+            {WEDDING_CONFIG.couple.bride.name}
           </h1>
 
           {guestName && (
