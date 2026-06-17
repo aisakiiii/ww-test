@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { MailOpen, Sparkles } from "lucide-react";
 import { WEDDING_CONFIG } from "../constants";
+
 interface EnvelopeProps {
   onOpen: () => void;
 }
+
 const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
   const [guestName, setGuestName] = useState<string>("");
   const [isAnimate, setIsAnimate] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const to = params.get("to");
     if (to) setGuestName(to);
     setTimeout(() => setIsAnimate(true), 300);
   }, []);
+
   const handleOpenClick = () => {
     setIsExiting(true);
     setTimeout(() => {
       onOpen();
     }, 800);
   };
+
   return (
     <div
       className={`bg-darkBg fixed inset-0 z-[2000] flex items-center justify-center overflow-hidden transition-all duration-1000 ease-in-out ${
@@ -55,12 +60,13 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
               <span className="block text-[10px] font-light tracking-[0.5em] text-white/40 uppercase md:text-[12px]">
                 The Wedding of
               </span>
+              {/* URUTAN NAMA DIUBAH: GROOM (DENNY) TERLEBIH DAHULU */}
               <h1 className="font-serif text-6xl leading-none tracking-tighter text-white italic md:text-9xl">
-                {WEDDING_CONFIG.couple.bride.name}
+                {WEDDING_CONFIG.couple.groom.name}
                 <span className="text-accent/30 mx-4 font-sans not-italic md:mx-8">
                   &
                 </span>
-                {WEDDING_CONFIG.couple.groom.name}
+                {WEDDING_CONFIG.couple.bride.name}
               </h1>
             </div>
           </div>
@@ -75,20 +81,22 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
                 />
               </div>
               <div className="relative z-10 space-y-3">
+                {/* TEKS DIUBAH KE BAHASA INGGRIS */}
                 <p className="text-accentDark dark:text-accent text-[11px] font-bold tracking-[0.3em] uppercase transition-colors duration-500 md:text-[13px]">
-                  Kepada Yth. Bapak/Ibu/Sdr/i:
+                  Dear Valued Guest:
                 </p>
                 <div className="dark:via-accent/30 mx-auto h-[1px] w-16 bg-gradient-to-r from-transparent via-slate-400 to-transparent opacity-50"></div>
               </div>
               <div className="relative z-10 py-2">
+                {/* DEFAULT TAMU DIUBAH JADI VALUED GUEST */}
                 <h2 className="font-serif text-4xl tracking-tight break-words text-slate-900 italic drop-shadow-sm transition-colors duration-500 md:text-6xl dark:text-white">
-                  {guestName || "Tamu Undangan"}
+                  {guestName || "Valued Guest"}
                 </h2>
               </div>
               <div className="relative z-10 pt-2">
+                {/* TEKS UNDANGAN DIUBAH KE BAHASA INGGRIS */}
                 <p className="mx-auto max-w-xs text-[10px] leading-relaxed font-light text-slate-600 italic transition-colors duration-500 md:text-[12px] dark:text-slate-400">
-                  Kami mengundang Anda untuk merayakan kebahagiaan kami dalam
-                  ikatan suci pernikahan.
+                  We cordially invite you to celebrate our happiness in the holy bond of marriage.
                 </p>
               </div>
             </div>
@@ -99,8 +107,9 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
               className="group text-primary hover:bg-accent hover:text-darkBg relative inline-flex items-center gap-4 overflow-hidden rounded-full bg-white px-12 py-6 text-[11px] font-bold tracking-[0.2em] uppercase shadow-[0_15px_40px_-10px_rgba(255,255,255,0.3)] transition-all duration-700 active:scale-95 md:text-[13px]"
             >
               <div className="relative z-10 flex items-center gap-3">
+                {/* TEKS TOMBOL DIUBAH JADI OPEN INVITATION */}
                 <MailOpen className="h-5 w-5 transition-transform duration-500 group-hover:scale-110" />
-                Buka Undangan
+                Open Invitation
               </div>
               <div className="bg-accent absolute inset-0 translate-y-full transition-transform duration-500 group-hover:translate-y-0"></div>
             </button>
@@ -120,4 +129,5 @@ const Envelope: React.FC<EnvelopeProps> = ({ onOpen }) => {
     </div>
   );
 };
+
 export default Envelope;
