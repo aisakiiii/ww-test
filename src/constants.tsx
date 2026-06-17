@@ -13,120 +13,96 @@ export const MAX_GUESTS = parseInt(
   10
 );
 
+// Menggunakan lagu: A Thousand Years - The Piano Guys (Piano Cover)
 export const MUSIC_URL =
   import.meta.env.PUBLIC_MUSIC_URL ??
-  "https://www.bensound.com/bensound-music/bensound-love.mp3";
+  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
 
 export const WEDDING_TEXT = {
-  // 1. Salam Pembuka (Hero / Profile)
+  // 1. Salam Pembuka (Universal, Manis, & Sederhana)
   opening: {
-    salam: "Assalamu’alaikum Warahmatullahi Wabarakatuh",
+    salam: "Salam Hangat dan Salam Sejahtera",
     intro:
-      "Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah, perkenankanlah kami merangkai kasih sayang yang Engkau ciptakan ini dalam ikatan suci pernikahan.",
+      "Dua cerita yang berbeda kini menyatu menjadi satu perjalanan untuk saling melengkapi dan bertumbuh bersama. Di hari yang penuh kebahagiaan ini, kami ingin mengajak Anda menjadi bagian dari awal lembaran baru kami.",
   },
 
-  // 2. Ayat Suci / Quotes (Ar-Rum: 21 adalah standar emas yang penuh doa)
+  // 2. Quotes Pembuka (Elegan & Khidmat)
   quote: {
-    ar_rum: `"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."`,
-    source: "QS. Ar-Rum: 21",
+    ar_rum: `"Dan di atas semuanya itu: kenakanlah kasih, sebagai pengikat yang mempersatukan dan menyempurnakan."`,
+    source: "Kolose 3:14",
   },
 
-  // 3. Kalimat Undangan (Sangat Rendah Hati)
+  // 3. Kalimat Undangan
   invitation:
     "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, kawan, dan sahabat, untuk memberikan doa restu pada acara pernikahan kami:",
 
   // 4. Penutup (Footer)
   closing: {
     text: "Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kami.",
-    salam: "Wassalamu’alaikum Warahmatullahi Wabarakatuh",
+    salam: "Terima Kasih & Tuhan Memberkati",
     signature: "Kami yang berbahagia,",
-    family: "Kel. Bpk [Ayah Pria] & Kel. Bpk [Ayah Wanita]",
+    family: "Keluarga Besar Denny & Ingrid",
   },
 
-  // 5. Disclaimer Kado (Halus & Sopan)
+  // 5. Informasi Dresscode Tambahan (Sesuai Pilihan Anda)
   gift: {
-    title: "Tanda Kasih",
-    desc: "Kehadiran dan doa restu Anda adalah hadiah terbaik bagi kami. Namun, jika Anda ingin memberikan tanda kasih dalam bentuk lain, kami menerimanya dengan segala kerendahan hati.",
+    title: "Dress Code & Tanda Kasih",
+    desc: "Demi keselarasan estetika acara, para tamu undangan dihimbau untuk mengenakan pakaian bernuansa All Black (Hitam). Kehadiran serta dukungan doa Anda sangat melengkapi kebahagiaan kami.",
   },
 };
 
 export const WEDDING_CONFIG: WeddingConfig = {
   couple: {
-    bride: {
-      name: import.meta.env.PUBLIC_BRIDE_NICKNAME ?? "Fey",
-      fullName: import.meta.env.PUBLIC_BRIDE_FULLNAME ?? "Fera Oktapia",
-      parents:
-        import.meta.env.PUBLIC_BRIDE_PARENTS ??
-        "Putri ke ... dari Bapak ... & Ibu ...",
-      instagram: import.meta.env.PUBLIC_BRIDE_INSTAGRAM ?? "feraoktapia___",
-      image:
-        import.meta.env.PUBLIC_BRIDE_IMAGE ??
-        "https://placehold.co/600x800?text=Fey+Portrait",
-    },
     groom: {
-      name: import.meta.env.PUBLIC_GROOM_NICKNAME ?? "Yaya",
-      fullName: import.meta.env.PUBLIC_GROOM_FULLNAME ?? "Yahya Zulfikri",
-      parents:
-        import.meta.env.PUBLIC_GROOM_PARENTS ??
-        "Putra ke ... dari Bapak ... & Ibu ...",
-      instagram: import.meta.env.PUBLIC_GROOM_INSTAGRAM ?? "zulfikriyahya_",
-      image:
-        import.meta.env.PUBLIC_GROOM_IMAGE ??
-        "https://placehold.co/600x800?text=Yaya+Portrait",
+      name: "Denny",
+      fullName: "Denny Kiiii",
+      parents: "Putra pertama dari Bapak Kiiii & Ibu Juuuuu",
+      image: "https://placehold.co/600x800?text=Denny+Portrait",
+    },
+    bride: {
+      name: "Ingrid",
+      fullName: "Ingrid Melyana",
+      parents: "Putri pertama dari Bapak Gohhh & Ibu Helll",
+      image: "https://placehold.co/600x800?text=Ingrid+Portrait",
     },
   },
   venue: {
-    name: import.meta.env.PUBLIC_VENUE_NAME ?? "The Royal Azure Ballroom",
-    address: import.meta.env.PUBLIC_VENUE_ADDRESS ?? "Jl. Elok No. 77",
-    latitude: parseFloat(import.meta.env.PUBLIC_VENUE_LAT ?? "-6.2088"),
-    longitude: parseFloat(import.meta.env.PUBLIC_VENUE_LNG ?? "106.8456"),
+    name: "Grha Mahameru",
+    address: "Jalan Raya Jemursari 73, Wonocolo, Surabaya, Jawa Timur 60237",
+    latitude: -7.3195, 
+    longitude: 112.7483,
   },
   events: {
     akad: {
-      title: import.meta.env.PUBLIC_AKAD_TITLE ?? "Janji Suci",
-      day: import.meta.env.PUBLIC_AKAD_DAY ?? "Minggu",
-      date: import.meta.env.PUBLIC_AKAD_DATE ?? "11 Oktober 2025",
-      startTime: import.meta.env.PUBLIC_AKAD_START ?? "08:00",
-      endTime: import.meta.env.PUBLIC_AKAD_END ?? "10:00",
-      startDateTime: new Date(
-        import.meta.env.PUBLIC_AKAD_ISO_START ?? "2025-10-11T08:00:00+07:00"
-      ),
-      endDateTime: new Date(
-        import.meta.env.PUBLIC_AKAD_ISO_END ?? "2025-10-11T10:00:00+07:00"
-      ),
+      title: "Pemberkatan Nikah",
+      day: "Sabtu",
+      date: "23 Januari 2027",
+      startTime: "13:00",
+      endTime: "Selesai",
+      startDateTime: new Date("2027-01-23T13:00:00+07:00"),
+      endDateTime: new Date("2027-01-23T15:00:00+07:00"),
     },
     resepsi: {
-      title: import.meta.env.PUBLIC_RESEPSI_TITLE ?? "Perayaan Cinta",
-      day: import.meta.env.PUBLIC_RESEPSI_DAY ?? "Minggu",
-      date: import.meta.env.PUBLIC_RESEPSI_DATE ?? "11 Oktober 2025",
-      startTime: import.meta.env.PUBLIC_RESEPSI_START ?? "11:00",
-      endTime: import.meta.env.PUBLIC_RESEPSI_END ?? "14:00",
-      startDateTime: new Date(
-        import.meta.env.PUBLIC_RESEPSI_ISO_START ?? "2025-10-11T11:00:00+07:00"
-      ),
-      endDateTime: new Date(
-        import.meta.env.PUBLIC_RESEPSI_ISO_END ?? "2025-10-11T14:00:00+07:00"
-      ),
+      title: "Resepsi Pernikahan",
+      day: "Sabtu",
+      date: "23 Januari 2027",
+      startTime: "18:00",
+      endTime: "Selesai",
+      startDateTime: new Date("2027-01-23T18:00:00+07:00"),
+      endDateTime: new Date("2027-01-23T21:00:00+07:00"),
     },
   },
   hero: {
-    image:
-      import.meta.env.PUBLIC_HERO_IMAGE ??
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
-    city: import.meta.env.PUBLIC_HERO_CITY ?? "Pandeglang, Banten",
+    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=2069&auto=format&fit=crop",
+    city: "Surabaya",
   },
 };
 
-export const LOVE_STORY = parseJson(import.meta.env.PUBLIC_LOVE_STORY, [
-  {
-    date: "Musim Gugur, 2020",
-    title: "Pertemuan Pertama",
-    desc: "Berawal dari sebuah diskusi kecil...",
-  },
-]);
+// Bagian Love Story dikosongkan agar fiturnya tidak muncul di halaman web
+export const LOVE_STORY = [];
 
 export const BANK_ACCOUNTS = parseJson(import.meta.env.PUBLIC_BANK_ACCOUNTS, [
-  { bank: "Bank BCA", number: "1234567890", name: "Fera Oktapia" },
+  { bank: "Bank BCA", number: "................", name: "Ingrid Melyana" },
 ]);
 
 export const GALLERY_IMAGES = parseJson(import.meta.env.PUBLIC_GALLERY_IMAGES, [
