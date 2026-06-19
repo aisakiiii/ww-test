@@ -46,7 +46,7 @@ export const WEDDING_TEXT = {
   // 5. Dress Code Info (Bebas dari kata "Blessing/Restu")
   gift: {
     title: "Dress Code & Attire",
-    desc: "To complement the aesthetic of our celebration, guests are kindly requested to dress in All Black attire. Your presence and kind prayers are the greatest gifts to complete our happiness.",
+    desc: "To complement the aesthetic of our celebration, guests are kindly requested to dress in All Black attire.",
   },
 };
 
