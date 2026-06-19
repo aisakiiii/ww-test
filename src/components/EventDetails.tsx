@@ -56,7 +56,7 @@ const EventDetails: React.FC = () => {
           </div>
 
           <h2 className="font-serif text-4xl tracking-tight text-slate-900 italic md:text-9xl dark:text-white">
-            Waktu & Tempat
+            Event Details
           </h2>
           {/* Kalimat Undangan Sopan */}
           <p className="mx-auto max-w-2xl px-4 text-base font-light text-balance text-slate-500 italic md:text-xl dark:text-slate-400">
