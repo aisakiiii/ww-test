@@ -43,7 +43,7 @@ export const WEDDING_TEXT = {
     family: "The Families of Denny & Ingrid",
   },
 
-  // 5. Dress Code Info (Bebas dari kata "Blessing/Restu")
+  // 5. Dress Code Info 
   gift: {
     title: "Dress Code & Attire",
     desc: "To complement the aesthetic of our celebration, guests are kindly requested to dress in All Black attire.",
@@ -77,7 +77,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
       day: "Saturday",
       date: "January 23, 2027",
       startTime: "13:00",
-      endTime: "Until Finished",
+      endTime: "14:00",
       startDateTime: new Date("2027-01-23T13:00:00+07:00"),
       endDateTime: new Date("2027-01-23T15:00:00+07:00"),
     },
@@ -86,7 +86,7 @@ export const WEDDING_CONFIG: WeddingConfig = {
       day: "Saturday",
       date: "January 23, 2027",
       startTime: "18:00",
-      endTime: "Until Finished",
+      endTime: "21:00",
       startDateTime: new Date("2027-01-23T18:00:00+07:00"),
       endDateTime: new Date("2027-01-23T21:00:00+07:00"),
     },
