@@ -3,7 +3,7 @@ import { Heart } from "lucide-react";
 import { WEDDING_CONFIG, WEDDING_TEXT } from "../constants";
 
 const CoupleProfile: React.FC = () => {
-  const { bride, groom } = WEDDING_CONFIG.couple;
+  const { groom, bride } = WEDDING_CONFIG.couple;
   
   return (
     <section
