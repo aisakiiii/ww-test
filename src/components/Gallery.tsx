@@ -152,7 +152,7 @@ const Gallery: React.FC = () => {
             </div>
             <div className="mt-4 flex items-center gap-2 opacity-30 md:mt-8">
               <span className="tracking-luxury text-[7px] font-bold text-white uppercase italic md:text-[10px]">
-                The Wedding of Fey & Yaya
+                The Wedding of Denny & Ingrid
               </span>
             </div>
           </div>
