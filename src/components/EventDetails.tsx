@@ -29,8 +29,8 @@ const EventDetails: React.FC = () => {
     eventType: "akad" | "resepsi"
   ) => {
     const event = {
-      title: `${WEDDING_CONFIG.events[eventType].title} ${WEDDING_CONFIG.couple.bride.name} & ${WEDDING_CONFIG.couple.groom.name}`,
-      description: `Menghadiri ${WEDDING_CONFIG.events[eventType].title} pernikahan ${WEDDING_CONFIG.couple.bride.name} & ${WEDDING_CONFIG.couple.groom.name}.`,
+      title: `${WEDDING_CONFIG.events[eventType].title} ${WEDDING_CONFIG.couple.grrom.name} & ${WEDDING_CONFIG.couple.bride.name}`,
+      description: `Menghadiri ${WEDDING_CONFIG.events[eventType].title} pernikahan ${WEDDING_CONFIG.couple.groom.name} & ${WEDDING_CONFIG.couple.bride.name}.`,
       location: WEDDING_CONFIG.venue.address,
       startTime: WEDDING_CONFIG.events[eventType].startDateTime,
       endTime: WEDDING_CONFIG.events[eventType].endDateTime,
